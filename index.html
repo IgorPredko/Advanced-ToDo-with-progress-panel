@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header" id="header">
+        <h1>NEW DAY - NEW START</h1>
+        <div class="quote"></div>
+      </div>
+
+      <div class="main-back">
+        <div class="main">
+          <div class="main-content">
+            <!-- ///COL-1/// -->
+            <div class="main-col-1">
+              <!-- ///TO DO LIST/// -->
+              <form>
+                <div class="input-wrapper">
+                  <input
+                    id="myInput"
+                    type="text"
+                    placeholder="Add new task..."
+                  />
+                  <button class="addBtn" type="submit">Add Task</button>
+                </div>
+              </form>
+              <div class="tasks-wrapper">
+                <div class="main-tasks">
+                  <ul></ul>
+                </div>
+                <!-- ///DAILY STATISTICS/// -->
+                <div class="daily-statistics">
+                  <!-- ///CLOCK/// -->
+                  <div class="clock-wrap">
+                    <div
+                      id="MyClockDisplay"
+                      class="clock"
+                      onload="showTime()"
+                    ></div>
+                  </div>
+                  <!-- ///TASK NUM/// -->
+                  <div class="task-num">
+                    <div class="totalTasks">Number of tasks: 00</div>
+                    <div class="completedTasks">Tasks completed: 00</div>
+                  </div>
+                  <!-- ///STAT CIRCLE/// -->
+                  <div class="circle-content">
+                    <div class="progress">
+                      <span class="progress-value"></span>
+                    </div>
+                  </div>
+                  <!-- ///STATISTICS/// -->
+                  <div class="statistic">
+                    <div class="weekly-report">Weekly report:</div>
+                    <div class="day-wrap">
+                      <div class="monday st">
+                        <div class="stat-text monday-text">Mon</div>
+                        <div class="stat-bar monday-bar">
+                          <div class="mon-perc-bar perc-bar">
+                            <p class="mon-p"></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="tuesday st">
+                        <div class="stat-text tuesda-text">Tue</div>
+                        <div class="stat-bar tuesda-bar">
+                          <div class="tue-perc-bar perc-bar">
+                            <p class="tue-p"></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="wednesday st">
+                        <div class="stat-text wednesday-text">Wed</div>
+                        <div class="stat-bar wednesday-bar">
+                          <div class="wed-perc-bar perc-bar">
+                            <p class="wed-p"></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="thursday st">
+                        <div class="stat-text thursday-text">Thu</div>
+                        <div class="stat-bar thursday-bar">
+                          <div class="thu-perc-bar perc-bar">
+                            <p class="thu-p"></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="friday st">
+                        <div class="stat-text friday-text">Fri</div>
+                        <div class="stat-bar friday-bar">
+                          <div class="fri-perc-bar perc-bar">
+                            <p class="fri-p"></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="saturday st">
+                        <div class="stat-text saturday-text">Sat</div>
+                        <div class="stat-bar saturday-bar">
+                          <div class="sat-perc-bar perc-bar">
+                            <p class="sat-p"></p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="sunday st">
+                        <div class="stat-text sunday-text">Sun</div>
+                        <div class="stat-bar sunday-bar">
+                          <div class="sun-perc-bar perc-bar">
+                            <p class="sun-p"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ////////////////////////////CLEAN LOCAL STORAGE//////////////////////////// -->
+                  <div class="cleanBtn-wrap">
+                    <div id="cleanDay-btn" onclick="removeCurrentTasks()">
+                      Remove all tasks
+                    </div>
+                    <div id="cleanAll-btn" onclick="cleanWeeklyReport()">
+                      Clean weekly report
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //////////////////////////////////// -->
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
